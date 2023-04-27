@@ -159,7 +159,15 @@ p{
 .banner__button{
     width: 25%;
     height: 30px;
-    border: #FF4582;
+    border: 0px;
     border-radius: 25px;
     margin-top: 30px;
+    background-color: #FF4582;
 }
+
+.feedback-btn{
+    background-color: #be1116;
+    border-radius: 0px;
+    color: white
+}
+
