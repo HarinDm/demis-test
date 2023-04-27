@@ -166,6 +166,7 @@ p{
 }
 
 .feedback-btn{
+    width: auto;
     background-color: #be1116;
     border-radius: 0px;
     color: white
