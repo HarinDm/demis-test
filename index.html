@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app"></div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+
+        let {createApp} = Vue;
+
+        // v-model
+        // v-bind
+        // v-on
+        // v-if
+        // v-else
+        // v-show
+
+
+        let rootComponent = {
+            template: `
+                <div class="name">
+                    <h2>Введите имя полностью</h2>
+                    <input type="text" v-model="name">
+                    <button v-on:click="name = ''" v-bind:disabled="name.length == 0">X</button>
+                    <div v-show="name.length >= 3">
+                        <h2>Hello, {{ name }}</h2>
+                    </div>
+                    <div v-show="name.length <= 2">
+                    </div>
+                    <div v-show="name.length >= 3">
+                        <button>
+                            <a src="#">Sugn in<a/>
+                        </button>
+                    </div>
+                </div>
+            `,
+            data(){
+                return {
+                    name: ''
+                }
+            }
+        };
+
+        let app = createApp(rootComponent);
+        app.mount('.app');
+    </script>
+</body>
+</html>
