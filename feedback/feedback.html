@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/style.css" rel="stylesheet">
+    <title>feedback</title>
+</head>
+<body>
+    <div class="app"></div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+
+        let {createApp} = Vue;
+
+        let rootComponent = {
+            template: `
+                <div class="feedback-title">Форма обратной связи
+                    <div class="feedback-name">
+                        <label class="feedback-label">ФИО
+                            <input class="feedback-input" type="text" v-model="name">
+                        </label>
+                        
+                        
+                    </div>
+                    <div class="feedback-name">
+                        <label class="feedback-label">адрес
+                            <input class="feedback-input" type="text" v-model="address">
+                        </label>
+                        
+                        
+                    </div>
+                    <div class="feedback-name">
+                        <label class="feedback-label">телефон
+                            <input class="feedback-input" type="text" v-model="tel">
+                        </label>
+                        
+                        
+                    </div>
+                    <div class="feedback-name">
+                        <label class="feedback-label">e-mail
+                            <input class="feedback-input" type="text" v-model="e-mail">
+                        </label>
+                        
+                        
+                        
+                    </div>
+                    <div v-show="name.length >= 3">
+                            <button>
+                                <a src="#">Отправить<a/>
+                            </button>
+                        </div>
+                </div>
+            `,
+            data(){
+                return {
+                    name: ''
+                }
+            }
+        };
+
+        let app = createApp(rootComponent);
+        app.mount('.app');
+    </script>
+</body>
+</html>
