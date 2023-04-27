@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <title>News</title>
 </head>
 <body>
     <div class="app"></div>
@@ -20,23 +21,74 @@
         // v-else
         // v-show
 
-        
+
 
         let rootComponent = {
             template: `
-                <div class="name">
-                    <h2>Введите имя полностью</h2>
-                    <input type="text" v-model="name">
-                    <button v-on:click="name = ''" v-bind:disabled="name.length == 0">X</button>
-                    <div v-show="name.length >= 3">
-                        <h2>Hello, {{ name }}</h2>
+                <div class="feedback-title">Форма обратной связи
+                    <div class="feedback-name">
+                        <label class="feedback-label">ФИО
+                            <input class="feedback-input" type="text" v-model="name">
+                        </label>
+                        
+                        <div v-show="name.length >= 3">
+                            <h2>Hello, {{ name }}</h2>
+                        </div>
+                        <div v-show="name.length <= 2">
+                        </div>
+                        <div v-show="name.length >= 3">
+                            <button>
+                                <a src="#">Sugn in<a/>
+                            </button>
+                        </div>
                     </div>
-                    <div v-show="name.length <= 2">
+                    <div class="feedback-name">
+                        <label class="feedback-label">адрес
+                            <input class="feedback-input" type="text" v-model="name">
+                        </label>
+                        
+                        <div v-show="name.length >= 3">
+                            <h2>Hello, {{ name }}</h2>
+                        </div>
+                        <div v-show="name.length <= 2">
+                        </div>
+                        <div v-show="name.length >= 3">
+                            <button>
+                                <a src="#">Sugn in<a/>
+                            </button>
+                        </div>
                     </div>
-                    <div v-show="name.length >= 3">
-                        <button>
-                            <a src="#">Sugn in<a/>
-                        </button>
+                    <div class="feedback-name">
+                        <label class="feedback-label">телефон
+                            <input class="feedback-input" type="text" v-model="name">
+                        </label>
+                        
+                        <div v-show="name.length >= 3">
+                            <h2>Hello, {{ name }}</h2>
+                        </div>
+                        <div v-show="name.length <= 2">
+                        </div>
+                        <div v-show="name.length >= 3">
+                            <button>
+                                <a src="#">Sugn in<a/>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="feedback-name">
+                        <label class="feedback-label">e-mail
+                            <input class="feedback-input" type="text" v-model="name">
+                        </label>
+                        
+                        <div v-show="name.length >= 3">
+                            <h2>Hello, {{ name }}</h2>
+                        </div>
+                        <div v-show="name.length <= 2">
+                        </div>
+                        <div v-show="name.length >= 3">
+                            <button>
+                                <a src="#">Sugn in<a/>
+                            </button>
+                        </div>
                     </div>
                 </div>
             `,
