@@ -31,65 +31,35 @@
                             <input class="feedback-input" type="text" v-model="name">
                         </label>
                         
-                        <div v-show="name.length >= 3">
-                            <h2>Hello, {{ name }}</h2>
-                        </div>
-                        <div v-show="name.length <= 2">
-                        </div>
-                        <div v-show="name.length >= 3">
-                            <button>
-                                <a src="#">Sugn in<a/>
-                            </button>
-                        </div>
+                        
                     </div>
                     <div class="feedback-name">
                         <label class="feedback-label">адрес
-                            <input class="feedback-input" type="text" v-model="name">
+                            <input class="feedback-input" type="text" v-model="address">
                         </label>
                         
-                        <div v-show="name.length >= 3">
-                            <h2>Hello, {{ name }}</h2>
-                        </div>
-                        <div v-show="name.length <= 2">
-                        </div>
-                        <div v-show="name.length >= 3">
-                            <button>
-                                <a src="#">Sugn in<a/>
-                            </button>
-                        </div>
+                        
                     </div>
                     <div class="feedback-name">
                         <label class="feedback-label">телефон
-                            <input class="feedback-input" type="text" v-model="name">
+                            <input class="feedback-input" type="text" v-model="tel">
                         </label>
                         
-                        <div v-show="name.length >= 3">
-                            <h2>Hello, {{ name }}</h2>
-                        </div>
-                        <div v-show="name.length <= 2">
-                        </div>
-                        <div v-show="name.length >= 3">
-                            <button>
-                                <a src="#">Sugn in<a/>
-                            </button>
-                        </div>
+                        
                     </div>
                     <div class="feedback-name">
                         <label class="feedback-label">e-mail
-                            <input class="feedback-input" type="text" v-model="name">
+                            <input class="feedback-input" type="text" v-model="e-mail">
                         </label>
                         
-                        <div v-show="name.length >= 3">
-                            <h2>Hello, {{ name }}</h2>
-                        </div>
-                        <div v-show="name.length <= 2">
-                        </div>
-                        <div v-show="name.length >= 3">
+                        
+                        
+                    </div>
+                    <div v-show="name.length >= 3">
                             <button>
-                                <a src="#">Sugn in<a/>
+                                <a src="#">Отправить<a/>
                             </button>
                         </div>
-                    </div>
                 </div>
             `,
             data(){
