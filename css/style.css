@@ -155,3 +155,11 @@ p{
     overflow: hidden;
     line-height: 28px;
 }
+
+.banner__button{
+    width: 25%;
+    height: 30px;
+    border: #FF4582;
+    border-radius: 25px;
+    margin-top: 30px;
+}
